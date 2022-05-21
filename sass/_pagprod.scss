@@ -1,0 +1,62 @@
+/*Paginas productos*/
+.bg-productos{
+    background-color: $color-secundario;
+}
+
+.conteiner__productouno{
+
+    img{
+    max-width: 400px;
+    width: 100%;
+    margin: 15px;
+}
+
+}
+.productouno__contenido{
+
+    .productouno__nombre{
+    font-size: 30px;
+    }
+    .productouno__precio{
+        font-size: 20px;
+    }
+}
+.formulario__campo{
+    background-color: $color-principal;
+    color: $color-secundario;
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+    width: 200px;
+}
+.nuevo{
+    margin-top: 20px;
+    width: 200px;
+}
+.formulario__submit{
+    background-color: $color-principal;
+    color: $color-secundario;
+    font-size: 20px;
+    padding: 15px;
+    margin-top: 20px;
+    width: 200px;
+}
+.formulario__campo{font-family: 'Neue Kabel', sans-serif;
+font-weight: 700;}
+
+.formulario__submit{
+    @extend .formulario__campo;
+}
+
+
+
+@media screen and (max-width:768px){
+   .formulario{
+       text-align: center;
+   }
+   .formulario__campo, .formulario__submit{
+       width: 100%;
+   }
+    
+}
+

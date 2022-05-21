@@ -1,0 +1,176 @@
+//Maps
+$sizes:(
+    's-primario': 200px,
+    's-secundario':250px,
+    's-tercero':300px
+);
+
+//Mixin
+@mixin sizes2 ($alto,$ancho){
+    width: $ancho;
+    height: $alto;
+}
+
+//Shop
+.titulo-productos{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+}
+.contenedor-section{
+    max-width: 1400px;
+    @include sizes2(auto, 100% )/*-----Mixin------*/
+}
+
+.contenedor__productos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows: repeat(2,1fr);
+    gap:40px;
+    margin:40px 0px 20px 0px;
+    justify-items: center;}
+
+        .productos__shop{
+        max-width: map-get($map: $sizes, $key:'s-secundario' );
+        width: 80%;
+        height: map-get($map: $sizes, $key:'s-tercero') + 30px;
+        border: 1px solid;
+        a{
+        text-decoration: none;
+        }
+        .shop__imagenes{
+            max-width: map-get($map: $sizes, $key:'s-primario' );
+            width: 80%;
+            height: map-get($map: $sizes, $key:'s-secundario' );
+            background-size: cover;
+            padding-top: 5px;
+            padding-left: 22px;
+            margin-top: 10px ;
+        }
+
+        .shop__productoinfo{
+                text-align: center;
+                color: black;
+                .shop__productosnombre{
+                font-size: 20px;
+                margin-bottom: 5px;
+                }
+                .shop__productosprecio{
+                font-size: 15px;
+                }
+            }
+    }   
+
+
+//Mediaqueries Productos
+@media screen and (max-width:768px){
+    .contenedor__productos{
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;  
+    }
+}
+@media screen and (max-width:480px){
+    .contenedor__productos{
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;  
+    }
+    .productos__shop{
+        max-width: 250px;
+        width: 100%;
+        height: 330px;
+        }
+    .titulo-productos{
+        margin-top: 60px;
+    }
+}
+
+//Extend
+.productos__shop1{
+    @extend .productos__shop;
+}
+.productos__shop2{
+    @extend .productos__shop;
+}
+.productos__shop3{
+    @extend .productos__shop;
+}
+.productos__shop4{
+    @extend .productos__shop;
+}
+.productos__shop5{
+    @extend .productos__shop;
+}
+.productos__shop6{
+    @extend .productos__shop;
+}
+
+.height-100 {
+    height: 100vh
+}
+
+
+.card {
+    width: 100%;
+    border: none;
+    height: 330px;
+    max-width: 380px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    cursor:pointer;
+    justify-content: center;
+    transition: all ease 0.4s
+}
+
+
+.card img {
+    transition: all ease 0.4s
+}
+
+.card:hover img {
+    margin-top: -80px
+}
+
+.card .content {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    bottom: -60%;
+    margin-left: -8px;
+    transition: all ease 0.5s;
+    border-radius: 4px;
+    box-shadow: 0px -3px 4px rgba(10, 10, 10, 0.09)
+}
+
+.card .content .category {
+    font-family: "Neue Kabel", sans-serif;
+    font-size: 17px;
+    font-weight: 600
+}
+
+.card .content .price {
+    font-size: 17px;
+    font-weight: 500;
+    color: gray;
+}
+
+.card .content p {
+    font-weight: 500;
+    font-size: 12px
+}
+
+.card:hover .content {
+    bottom: 0%
+}
+
+.buttons button {
+    border-radius: 1px;
+    margin-bottom: 10px;
+    transition: all ease 0.3s
+}
+
+.content {
+    padding: 10px
+}
+

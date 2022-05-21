@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//Fuente
+body{
+    font-family: 'Neue Kabel', sans-serif;
+    font-weight: 700;
+}
+
+/*animaciones*/
+#animacion{
+    transition: all 300ms;
+    position: relative;
+    &:hover{
+    transform:scale(1.15)
+}
+}

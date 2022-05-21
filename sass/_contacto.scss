@@ -1,0 +1,45 @@
+/*contacto*/
+.no-margin{
+    margin: 0;
+}
+.contacto{
+    background-color: $color-principal;
+    color: $color-secundario;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 200px;
+
+}
+.legend{
+    font-size: 20px;
+}
+
+.contacto__form{
+    margin-top: 50px;
+
+}
+.contacto__form h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.contenedor-campos {
+    .campo{
+    margin:15px;
+    }
+
+    .campo__label{
+    display: inline-block;
+    width: 70px;
+    }
+
+    textarea{
+    width: 170px;
+    }
+
+    
+}
+.boton-contacto{
+    width: 120px;
+    height: 30px;
+    margin-left: 90px;
+}
